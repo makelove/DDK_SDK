@@ -30,8 +30,8 @@ P_APPKEY = "client_id"
 P_API = "type"
 P_SESSION = "session"
 P_ACCESS_TOKEN = "access_token"
-P_VERSION = "v"
-P_FORMAT = "format"
+P_VERSION = "version"
+P_FORMAT = "data_type"
 P_TIMESTAMP = "timestamp"
 P_SIGN = "sign"
 P_SIGN_METHOD = "sign_method"
@@ -238,11 +238,11 @@ class RestApi(object):
         #     P_API: self.getapiname(),
         # }
         sys_parameters = {
-            # P_FORMAT: 'json',
+            P_FORMAT: 'JSON',
             P_APPKEY: self.__app_key,
             # P_SIGN_METHOD: "md5",
-            # P_VERSION: '2.0',
-            P_TIMESTAMP: str(int(time.time())),
+            P_VERSION: 'V1',
+            P_TIMESTAMP: str(int(time.time())),#UNIX时间戳，单位秒，需要与拼多多服务器时间差值在10分钟内
             # P_PARTNER_ID: SYSTEM_GENERATE_VERSION,
             P_API: self.getapiname(),
         }
