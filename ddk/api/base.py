@@ -148,7 +148,7 @@ class MultiPartForm(object):
         return '\r\n'.join(flattened)
 
 
-class TopException(Exception):
+class DdkException(Exception):
     # ===========================================================================
     # 业务异常类
     # ===========================================================================
@@ -273,14 +273,17 @@ class RestApi(object):
         url = N_REST + "?" + urllib.parse.urlencode(sys_parameters)
         connection.request(self.__httpmethod, url, body=body, headers=header)
         response = connection.getresponse()
+        # print(body,url)#验证
+
         if response.status is not 200:
             raise RequestException('invalid http status ' + str(response.status) + ',detail body:' + response.read())
         result = response.read()
         jsonobj = json.loads(result)
-        print(jsonobj)
+        # print(jsonobj)#测试
+
         # if jsonobj.has_key("error_response"):
         if "error_response" in jsonobj:
-            error = TopException()#TODO
+            error = DdkException()
             # if jsonobj["error_response"].has_key(P_CODE) :
             if P_CODE in jsonobj["error_response"]:
                 error.errorcode = jsonobj["error_response"][P_CODE]

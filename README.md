@@ -13,4 +13,5 @@
     - 多多进宝
         - https://jinbao.pinduoduo.com/index
 
-
+- 开发环境
+    - python 3.6
