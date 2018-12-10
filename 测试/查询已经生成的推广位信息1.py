@@ -21,7 +21,7 @@ def test1():
     req.page_size = 100
     try:
         resp = req.getResponse()
-        print(resp)
+        print(resp,len(resp['p_id_query_response']['p_id_list']))
         print('-' * 40)
         print(json.dumps(resp))
 
