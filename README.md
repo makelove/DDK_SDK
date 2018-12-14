@@ -15,3 +15,10 @@
 
 - 开发环境
     - python 3.6
+    - 仿照 Taobao_topsdk
+    - 安装
+        - https://pypi.org/project/ddk/
+        - pip install ddk
+        - pip install ddk --upgrade
+        - 卸载
+            - pip uninstall ddk

@@ -8,7 +8,7 @@
 __init__.py.py:
 """
 
-__version__ = '18.12.9.14'
+__version__ = '18.12.14'
 __author__ = 'play4fun <play4fun@foxmail.com>'
 
 from ddk.api.base import sign
