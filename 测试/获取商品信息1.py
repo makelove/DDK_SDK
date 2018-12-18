@@ -17,7 +17,7 @@ def test1():
     req = DdkGoodsDetail()
     req.set_app_info(appinfo(pdd_client_id, secret=pdd_client_secret))
     # goods_id='4532814226,2478116379'#参数错误:只支持单个goodsId查询
-    goods_id='2478116379'
+    goods_id='4979630814'
     req.goods_id_list = f'[{goods_id}]'#
     try:
         resp = req.getResponse()
