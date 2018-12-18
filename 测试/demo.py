@@ -2,7 +2,7 @@
 from ddk.api.rest.DdkGoodsDetail import DdkGoodsDetail
 from ddk import appinfo
 import traceback,json
-from config import pdd_client_id,pdd_client_secret
+from config import pdd_client_id,pdd_client_secret,pid
 
 def test1():
     req = DdkGoodsDetail()
