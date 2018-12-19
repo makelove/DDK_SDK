@@ -14,7 +14,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='ddk',
-    version='18.12.14',  # 按日期
+    version='18.12.19',  # 按日期
     author='play4fun',
     author_email='play4fun@foxmail.com',
     packages=find_packages(),

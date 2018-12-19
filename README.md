@@ -10,6 +10,8 @@
             - https://open.pinduoduo.com/#/document
         - 多多客API
             - https://open.pinduoduo.com/#/apidocument
+        - 多多客权限包
+            - http://open.pinduoduo.com/#/apidocument?port=5&id=2
     - 多多进宝
         - https://jinbao.pinduoduo.com/index
 
