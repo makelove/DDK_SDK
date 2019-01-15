@@ -16,7 +16,7 @@ import urllib
 import time
 import hashlib
 import json
-import top
+import ddk
 import itertools
 import mimetypes
 
@@ -191,9 +191,9 @@ class RestApi(object):
         self.__domain = domain
         self.__port = port
         self.__httpmethod = "POST"
-        if (top.getDefaultAppInfo()):
-            self.__app_key = top.getDefaultAppInfo().appkey
-            self.__secret = top.getDefaultAppInfo().secret
+        if (ddk.getDefaultAppInfo()):
+            self.__app_key = ddk.getDefaultAppInfo().appkey
+            self.__secret = ddk.getDefaultAppInfo().secret
 
     def get_request_header(self):
         return {
@@ -205,8 +205,8 @@ class RestApi(object):
     def set_app_info(self, appinfo):
         # =======================================================================
         # 设置请求的app信息
-        # @param appinfo: import top
-        #                 appinfo top.appinfo(appkey,secret)
+        # @param appinfo: import ddk
+        #                 appinfo ddk.appinfo(appkey,secret)
         # =======================================================================
         self.__app_key = appinfo.appkey
         self.__secret = appinfo.secret

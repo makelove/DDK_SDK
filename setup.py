@@ -14,11 +14,10 @@ from setuptools import setup, find_packages
 
 setup(
     name='ddk',
-    version='18.12.19',  # 按日期
+    version='19.1.14.18',  # 按日期
     author='play4fun',
     author_email='play4fun@foxmail.com',
     packages=find_packages(),
-    # packages=['jd_union'],
     install_requires=[],
     license='MIT',
     description="拼多多-多多客联盟 CPS 工具包",
