@@ -18,7 +18,7 @@ def test1():
     req = DdkGoodsPromotionUrlGenerate()
     req.set_app_info(appinfo(pdd_client_id, secret=pdd_client_secret))
 
-    goods_id = '2478116379'
+    goods_id = '608295467'
     req.goods_id_list = f'[{goods_id}]'  #
     req.p_id = pid
     req.generate_short_url = True
