@@ -11,14 +11,14 @@
 from ddk.api.rest.DdkGoodsPromotionUrlGenerate import DdkGoodsPromotionUrlGenerate
 from ddk import appinfo
 import traceback, json
-from config import pdd_client_id, pdd_client_secret,pid
+from config import pdd_client_id, pdd_client_secret, pid
 
 
 def test1():
     req = DdkGoodsPromotionUrlGenerate()
     req.set_app_info(appinfo(pdd_client_id, secret=pdd_client_secret))
 
-    goods_id = '608295467'
+    goods_id = '59649770'  # '608295467'
     req.goods_id_list = f'[{goods_id}]'  #
     req.p_id = pid
     req.generate_short_url = True
@@ -28,8 +28,8 @@ def test1():
     try:
         resp = req.getResponse()
         print(resp)
-        print('-'*40)
-        print(json.dumps(resp))
+        print('-' * 40)
+        print(json.dumps(resp, indent=2))
 
         # print(json.dumps(f, ensure_ascii=False))
     except Exception as e:
@@ -121,6 +121,7 @@ def test1():
     }
 }
     '''
+
 
 if __name__ == '__main__':
     test1()
