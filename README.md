@@ -6,8 +6,11 @@
 - 官网
     - https://open.pinduoduo.com/#/index
     - 开发者文档
-        - 多多客入驻指南
+        - [多多客入驻指南](https://open.pinduoduo.com/#/document?title=%25E5%25A4%259A%25E5%25A4%259A%25E5%25AE%25A2%25E5%2585%25A5%25E9%25A9%25BB%25E6%258C%2587%25E5%258D%2597)
             - https://open.pinduoduo.com/#/document
+            - 必须！第一步！
+                - 6、打开多多进宝页面输入client_id，将其与多多客进行绑定。
+                - 7、绑定成功后，便可成功获取多多客API权限。
         - 多多客API
             - https://open.pinduoduo.com/#/apidocument
         - 多多客权限包
