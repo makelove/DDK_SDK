@@ -2,6 +2,10 @@
 拼多多-多多客联盟 CPS 工具包
 
 
+- 其他平台
+    - [京东联盟](https://pypi.org/project/jd-union/)
+    - [淘宝联盟](https://github.com/makelove/Taobao_topsdk)
+
 
 - 官网
     - https://open.pinduoduo.com/#/index
