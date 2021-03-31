@@ -1,6 +1,5 @@
 # DDK_SDK
-拼多多-多多客联盟 CPS 工具包
-
+## 拼多多-多多客联盟 CPS 工具包
 
 
 - 官网
@@ -10,6 +9,7 @@
             - https://open.pinduoduo.com/#/document
             - 必须！第一步！
                 - 6、打开多多进宝页面输入client_id，将其与多多客进行绑定。
+                    - 多多客 现在2021年需要实名认证，下载【多多进宝】App
                 - 7、绑定成功后，便可成功获取多多客API权限。
         - 多多客API
             - https://open.pinduoduo.com/#/apidocument
@@ -17,6 +17,12 @@
             - http://open.pinduoduo.com/#/apidocument?port=5&id=2
     - 多多进宝
         - https://jinbao.pinduoduo.com/index
+
+
+## 注意事项
+- 公告
+    - [自2021年3月31日起，平台将对长期未发布服务的已上线应用或服务资质进行限制处理](https://open.pinduoduo.com/application/document/announcement?id=159)
+
 
 - 开发环境
     - python 3.6
