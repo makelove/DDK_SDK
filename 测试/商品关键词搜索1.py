@@ -6,6 +6,13 @@
 
 """
 商品关键词搜索1.py:
+
+2021-4-1 问题
+ddk.api.base.DdkException: errorcode=None message=None subcode=60001
+submsg=未传入已经授权备案过的相关参数(pid/custom_parameters)，
+授权备案说明链接：https://jinbao.pinduoduo.com/qa-system?questionId=204
+application_host= service_host=
+
 """
 from pprint import pprint
 from ddk.api.rest.DdkGoodsSearch import DdkGoodsSearch
@@ -17,10 +24,17 @@ from config import pdd_client_id, pdd_client_secret
 def test1():
     req = DdkGoodsSearch()
     req.set_app_info(appinfo(pdd_client_id, secret=pdd_client_secret))
-    req.keyword = '木瓜'
+    req.keyword = '美食'
+
     # goods_id='2478116379'
     # req.goods_id_list = f'[{goods_id}]'#会返回这一条，只有1条
+
     req.page_size = 10
+
+    #TODO
+    req.pid = '1860931_129508134'
+    req.custom_parameters = '{"uid":"1860931"}' #多多客ID '1860931'
+
     try:
         resp = req.getResponse()
         pprint(resp)

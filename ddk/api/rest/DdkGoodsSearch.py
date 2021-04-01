@@ -7,8 +7,16 @@
 """
 DdkGoodsSearch.py:
 
-https://open.pinduoduo.com/#/apidocument/port?id=27
+2021
+
+https://jinbao.pinduoduo.com/third-party/api-detail?apiName=pdd.ddk.goods.search
 多多进宝商品查询
+
+
+https://jinbao.pinduoduo.com/qa-system?questionId=219
+授权备案成功后，为何pdd.ddk.goods.search接口还是返回未备案报错？
+仔细检查一下pdd.ddk.goods.search传入的pid+custom_parameters和生成备案链接的入参pid+custom_parameters是否一致，可能是pid漏传或者custom_parameters漏传了。
+
 """
 
 from ddk.api.base import RestApi
@@ -27,6 +35,7 @@ class DdkGoodsSearch(RestApi):
         self.goods_id_list = None  # 商品ID列表。例如：[123456,123]，当入参带有goods_id_list字段，将不会以opt_id、 cat_id、keyword维度筛选商品
         self.zs_duo_id = None  # 招商多多客ID
         self.merchant_type = None  # 店铺类型，1-个人，2-企业，3-旗舰店，4-专卖店，5-专营店，6-普通店（未传为全部）
+
         self.pid = None  # 推广位id
         self.custom_parameters = None  # 自定义参数
 
