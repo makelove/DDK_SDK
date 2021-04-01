@@ -22,10 +22,22 @@
     - 多多进宝
         - https://jinbao.pinduoduo.com/index
 
+- 常用API
+    - [pdd.ddk.goods.detail多多进宝商品详情查询](https://open.pinduoduo.com/application/document/api?id=pdd.ddk.goods.detail&permissionId=2)
+        - [GoodsSign接入使用](https://jinbao.pinduoduo.com/qa-system?questionId=252)
+    - [多多进宝商品查询：pdd.ddk.goods.search](https://jinbao.pinduoduo.com/third-party/api-detail?apiName=pdd.ddk.goods.search)
+    
+        
 
 ## 注意事项
 - 公告
     - [自2021年3月31日起，平台将对长期未发布服务的已上线应用或服务资质进行限制处理](https://open.pinduoduo.com/application/document/announcement?id=159)
+    - [授权备案](https://jinbao.pinduoduo.com/qa-system?questionId=204)
+        - [如何授权备案？](https://jinbao.pinduoduo.com/qa-system?questionId=218)
+        - [查询是否绑定备案：pdd.ddk.member.authority.query](https://jinbao.pinduoduo.com/third-party/api-detail?apiName=pdd.ddk.member.authority.query)
+        - [生成营销工具推广链接：pdd.ddk.rp.prom.url.generate](https://jinbao.pinduoduo.com/third-party/api-detail?apiName=pdd.ddk.rp.prom.url.generate)
+        
+    
 
 
 - 开发环境
