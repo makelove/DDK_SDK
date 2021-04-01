@@ -5,6 +5,10 @@
     - [京东联盟](https://pypi.org/project/jd-union/)
     - [淘宝联盟](https://github.com/makelove/Taobao_topsdk)
 
+- 视频 
+    - [淘口令被微信屏蔽了？来看看拼多多的【多多客SDK】开放平台](https://www.bilibili.com/video/BV1QE411J7R7/)
+    - [Python编程，写一个【QQ+拼多多】返现程序，在服务器上Docker运行](https://www.bilibili.com/video/BV15E411L7rk/)
+    - [【编程】拼多多-多多客-开发者-SDK，多多进宝。Python](https://www.bilibili.com/video/BV1GK4y1m7q8/)
 
 - 官网
     - https://open.pinduoduo.com/#/index
