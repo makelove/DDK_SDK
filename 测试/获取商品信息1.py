@@ -6,72 +6,103 @@
 
 """
 获取商品信息1.py:
+
+
+promotion_rate 佣金比例，千分比
+佣金=成交价x佣金比例/1000 单位为分
+
+min_group_price 最低价sku的拼团价，单位为分
+min_normal_price 最低价sku的单买价，单位为分
+
 """
 
 from ddk.api.rest.DdkGoodsDetail import DdkGoodsDetail
 from ddk import appinfo
 import traceback, json
 from config import pdd_client_id, pdd_client_secret
-
+from pprint import pprint
 
 def test1():
     req = DdkGoodsDetail()
     req.set_app_info(appinfo(pdd_client_id, secret=pdd_client_secret))
+
+    # 过时
     # goods_id='4532814226,2478116379'#参数错误:只支持单个goodsId查询
-    goods_id = '1695213'  # '608295467'
-    req.goods_id_list = f'[{goods_id}]'  #
+    # goods_id = '73224807'  # '608295467'
+
+    sign = 'Y9X2kbjEqfJGSjrVwvfZUTm_mDXRAAKI_JQFsEOOZIj'
+    req.goods_sign = sign  # OK
     try:
         resp = req.getResponse()
-        print(resp)
+        pprint(resp)
 
         # print(json.dumps(f, ensure_ascii=False))
     except Exception as e:
         print(e)
         print(traceback.format_exc())
     '''
-    {'goods_detail_response': {'goods_details': [{'avg_desc': 473,
-    'avg_lgst': 474,
-    'avg_serv': 475,
-    'cat_id': None,
-    'cat_ids': [17285, 17286, 17325, 0],
-    'category_id': 12,
-    'category_name': '海淘',
-    'coupon_discount': 300,
-    'coupon_end_time': 1546271999,
-    'coupon_min_order_amount': 300,
-    'coupon_remain_quantity': 19000,
-    'coupon_start_time': 1543766400,
-    'coupon_total_quantity': 20000,
-    'create_at': 1533372520,
-    'desc_pct': 0.4086,
-    'goods_desc': '【劲爆价】210g正品三金西瓜霜经典护龈牙膏 家庭装薄荷香型\n厂家正品',
-    'goods_eval_count': 55,
-    'goods_eval_score': 4.69,
-    'goods_gallery_urls': ['http://t00img.yangkeduo.com/goods/images/2018-08-01/b4f0ca07bcba9486b501944049d2d1a3.jpeg',
-     'http://t00img.yangkeduo.com/goods/images/2018-08-01/408dc0b261e6a7c0e2c5ace66ccd3987.jpeg',
-     'http://t00img.yangkeduo.com/goods/images/2018-08-01/38648c2a3c8124db97afbfacce87235d.jpeg',
-     'http://t00img.yangkeduo.com/goods/images/2018-08-01/2a4ae46491e62bb10e215a57ad3efd43.jpeg',
-     'http://t00img.yangkeduo.com/goods/images/2018-08-01/43f4ba6c94ce9e0e1b281c9cc731ae41.jpeg'],
-    'goods_id': 2478116379,
-    'goods_image_url': 'http://t00img.yangkeduo.com/goods/images/2018-08-01/52d8afe92e28104f3ac03fbf917a78f8.jpeg',
-    'goods_name': '【劲爆价】210g正品三金西瓜霜经典护龈牙膏 家庭装薄荷香型',
-    'goods_thumbnail_url': 'http://t00img.yangkeduo.com/goods/images/2018-08-04/b40c7bad375943d178de8c87ee806cee.jpeg',
-    'has_coupon': True,
-    'lgst_pct': 0.38,
-    'mall_cps': 1,
-    'mall_id': 1590059,
-    'mall_name': '名康家居馆',
-    'mall_rate': 100,
-    'merchant_type': 1,
-    'min_group_price': 990,
-    'min_normal_price': 1990,
-    'opt_id': 12,
-    'opt_ids': [292, 293, 328, 923, 12, 223, 15],
-    'opt_name': '海淘',
-    'promotion_rate': 400,
-    'serv_pct': 0.3734,
-    'sold_quantity': 503}],
-  'request_id': '15443329840343061'}}
+    {'goods_detail_response': {'goods_details': 
+    [{'cat_ids': [8172, 8181, 8226],
+      'category_id': 10696,
+      'category_name': '海淘',
+      'coupon_discount': 400,
+      'coupon_end_time': 1617465599,
+      'coupon_min_order_amount': 400,
+      'coupon_remain_quantity': 42000,
+      'coupon_start_time': 1617120000,
+      'coupon_total_quantity': 50000,
+      'desc_txt': '高',
+      'goods_desc': '云南板栗贝贝南瓜10斤板栗味贝贝小南瓜宝宝辅食老南瓜10/5/3斤',
+      'goods_gallery_urls': ['https://img.pddpic.com/mms-material-img/2021-03-18/02a2f2ba-4c20-4e72-9fe0-c8ed2470c7a0.jpeg.a.jpeg',
+                             'https://img.pddpic.com/mms-material-img/2021-03-04/07fa2be2-adf7-45a2-a77c-0303cf25f8bd.jpeg.a.jpeg',
+                             'https://img.pddpic.com/mms-material-img/2021-03-04/77c71f19-80e7-42e7-a18d-ec097c92015d.jpeg.a.jpeg',
+                             'https://img.pddpic.com/mms-material-img/2021-03-04/3f37b98a-f808-4cb7-9882-06563462ffb5.jpeg.a.jpeg',
+                             'https://img.pddpic.com/mms-material-img/2021-03-07/068932ec-8c67-43eb-9447-d6314ca755f3.jpeg.a.jpeg',
+                             'https://img.pddpic.com/mms-material-img/2021-03-07/477b41ce-908d-413c-9eab-f821b7a06526.jpeg.a.jpeg',
+                             'https://img.pddpic.com/mms-material-img/2021-03-07/101a13a1-61d8-451f-84db-b71603d12dec.jpeg.a.jpeg',
+                             'https://img.pddpic.com/mms-material-img/2021-03-04/174e9343-b6d0-4f8c-b7f8-ce7909f070eb.jpeg.a.jpeg',
+                             'https://img.pddpic.com/mms-material-img/2021-03-04/8e7cb92b-866c-4959-a416-ad2d0d12dc77.jpeg.a.jpeg',
+                             'https://img.pddpic.com/mms-material-img/2021-03-04/b52dda59-71d5-40d4-b0af-1c79a6e77994.jpeg.a.jpeg'],
+      'goods_id': 222575613798,
+      'goods_image_url': 'https://img.pddpic.com/mms-material-img/2021-03-18/02a2f2ba-4c20-4e72-9fe0-c8ed2470c7a0.jpeg.a.jpeg',
+      'goods_name': '云南板栗贝贝南瓜10斤板栗味贝贝小南瓜宝宝辅食老南瓜10/5/3斤',
+      'goods_sign': 'Y9X2kbjEqfJGSjrVwvfZUTm_mDXRAAKI_JQFsEOOZIj',
+      'goods_thumbnail_url': 'https://t00img.yangkeduo.com/goods/images/2021-03-18/ac0c94338b83d5b1c5cfc493078b8b20.jpeg',
+      'has_coupon': True,
+      'has_mall_coupon': False,
+      'lgst_txt': '高',
+      'mall_coupon_discount_pct': 0,
+      'mall_coupon_end_time': 0,
+      'mall_coupon_max_discount_amount': 0,
+      'mall_coupon_min_order_amount': 0,
+      'mall_coupon_remain_quantity': 0,
+      'mall_coupon_start_time': 0,
+      'mall_coupon_total_quantity': 0,
+      'mall_cps': 1,
+      'mall_id': 891464,
+      'mall_img_url': 'http://t16img.yangkeduo.com/pdd_ims/57951b6a06f626cac503643340156880.jpg',
+      'mall_name': '哈尼印象',
+      'merchant_type': 1,
+      'min_group_price': 990,
+      'min_normal_price': 1590,
+      'only_scene_auth': True,
+      'opt_id': 10696,
+      'opt_ids': [10723, 22884, 10696, 22280, 22281, 22921, 9419, 9451, 10700, 13, 9421, 12402, 8115, 151, 22879],
+      'opt_name': '海淘',
+      'plan_type': 4,
+      'predict_promotion_rate': 140,
+      'promotion_rate': 140,
+      'sales_tip': '6967',
+      'serv_txt': '高',
+      'service_tags': [9, 13],
+      'share_rate': 0,
+      'unified_tags': ['坏了包赔',
+                       '48小时发货'],
+      'video_urls': [],
+      'zs_duo_id': 8439561}],
+    'request_id': '16172464391342144'}}
+
+
     '''
 
 

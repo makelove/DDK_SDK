@@ -13,7 +13,7 @@
             - https://open.pinduoduo.com/#/document
             - 必须！第一步！
                 - 6、打开多多进宝页面输入client_id，将其与多多客进行绑定。
-                    - 多多客 现在2021年需要实名认证，下载【多多进宝】App
+                    - 【多多进宝】 现在2021年需要实名认证，下载【多多进宝】App
                 - 7、绑定成功后，便可成功获取多多客API权限。
         - 多多客API
             - https://open.pinduoduo.com/#/apidocument

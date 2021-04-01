@@ -6,6 +6,8 @@
 
 """
 查询店铺商品1.py:
+2021
+当前接口已下线
 
 pdd.ddk.mall.goods.list.get
 DdkMallGoodsListGet
@@ -23,6 +25,8 @@ def test1():
     req.set_app_info(appinfo(pdd_client_id, secret=pdd_client_secret))
     #
     req.mall_id = 327071922
+    req.page_number = 1
+    req.page_size = 10
     try:
         resp = req.getResponse()
         print(resp)
