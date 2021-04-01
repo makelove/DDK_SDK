@@ -37,7 +37,9 @@
         - [查询是否绑定备案：pdd.ddk.member.authority.query](https://jinbao.pinduoduo.com/third-party/api-detail?apiName=pdd.ddk.member.authority.query)
         - [生成营销工具推广链接：pdd.ddk.rp.prom.url.generate](https://jinbao.pinduoduo.com/third-party/api-detail?apiName=pdd.ddk.rp.prom.url.generate)
         
-    
+    - [多多进宝APP提现门槛降低至10元通知](https://jinbao.pinduoduo.com/message/detail?crumbs=broadcast&id=9851753)
+        - 2021-03-14 17:54:57
+        - 下载多多进宝官方APP，推广待提现余额满10元即可提现，无需等待，一键提现推广佣金。
 
 
 - 开发环境
