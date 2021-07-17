@@ -35,6 +35,7 @@
 
 ## 注意事项
 - 公告
+    -  2021-05-21 18:04:10 [关于多多客等级体系调整的通知](https://jinbao.pinduoduo.com/message/detail?crumbs=broadcast&id=11646079)
     - [自2021年3月31日起，平台将对长期未发布服务的已上线应用或服务资质进行限制处理](https://open.pinduoduo.com/application/document/announcement?id=159)
     - [授权备案](https://jinbao.pinduoduo.com/qa-system?questionId=204)
         - [如何授权备案？](https://jinbao.pinduoduo.com/qa-system?questionId=218)
