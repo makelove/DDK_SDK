@@ -17,13 +17,19 @@ min_normal_price 最低价sku的单买价，单位为分
 转链后
 https://mobile.yangkeduo.com/duo_coupon_landing.html?goods_id=344663340973&pid=1860931_197796447&goods_sign=E9j28lXHyTlGSjrVwvfa_LAGVflKJo_x_JQxaEVdW6j&zs_duo_id=25436963&cpsSign=CC_220511_1860931_197796447_5a031f10071b56bebb28fcc1a4fdcfdb&_x_ddjb_act=%7B%22st%22%3A%221%22%7D&duoduo_type=2
 
+https://blog.csdn.net/glorious_future/article/details/114996411
+通过搜索接口，搜索接口的keyword是支持传goods_id的，返回来的商品详情是带着goods_sign的，这样我们就拿到了goods_sign了
+
+
 """
 
 from ddk.api.rest.DdkGoodsDetail import DdkGoodsDetail
 from ddk import appinfo
-import traceback, json
+import traceback
+import json
 from config import pdd_client_id, pdd_client_secret
 from pprint import pprint
+
 
 def test1():
     req = DdkGoodsDetail()
@@ -33,7 +39,8 @@ def test1():
     # goods_id='4532814226,2478116379'#参数错误:只支持单个goodsId查询
     # goods_id = '73224807'  # '608295467'
 
-    sign = 'Y9X2kbjEqfJGSjrVwvfZUTm_mDXRAAKI_JQFsEOOZIj'
+    sign = 'E9j28lXHyTlGSjrVwvfa_LAGVflKJo_x_JQxaEVdW6j'
+    # sign = 'C4KXLHYA6AXF5RAWR3MOKHALRE_GEXDA'
     req.goods_sign = sign  # OK
     try:
         resp = req.getResponse()
